@@ -6,6 +6,7 @@ let products = [
     {id:5, name : "Casper Laptop", unitPrice:17000},
 ]
 
+// Prints arrays line by line ========================
 console.log("<ul>")
 products.map(product=>console.log(`<li>${product.name}</li>`))
 console.log("</ul>")
@@ -14,17 +15,21 @@ products.map(product=>{
     console.log(product)
     console.log('<li>${product.name}</li>')
 })
-// Filter yeni bir array oluşturuyor 
+
+
+// Filter creates a new array ========================
 let filteredProducts = products.filter(product=>product.unitPrice>12000)
 console.log(filteredProducts);
 
 let cartTotal = products.reduce((acc, product) => acc + product.unitPrice, 0)
 console.log(cartTotal)
 
-let cartTotal2 = products.filter(p=>p.unitPrice>13000).map(p=>{
-    p.unitPrice = p.unitPrice*1.18
-    return p 
-    })
-    .reduce((acc, p) =>acc+p.unitPrice,0)
+let cartTotal2 = products
+                .filter(p=>p.unitPrice>13000)
+                .map(p=>{
+                    p.unitPrice = p.unitPrice*1.18
+                    return p 
+                })
+                .reduce((acc, p) =>acc+p.unitPrice,0)
 
 console.log(cartTotal2)
