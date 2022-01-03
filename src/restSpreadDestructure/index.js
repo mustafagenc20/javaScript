@@ -8,12 +8,16 @@ let showProducts = function (id, ...products) {
 
 // showProducts(10, ["Apple", "Peer", "Watermelon"])
 
+
+
 // ========== SPREAD PARAMETER ===========
 
 let points = [1,2,3,14,50,40,75,6]
 console.log(...points)
 console.log(Math.max(...points))
 console.log(..."ABC", "D", ..."EFG", "H") // ... => parcalara ayiriyor
+
+
 
 // ========== DESTRUCTURING PARAMETER ===========
 // Eldeki degerlerin degiskenlere aktarilmasi []
